@@ -30,19 +30,18 @@ title: Doshi Labs
 <section id="work" class="section">
   <p class="section-label">Things On My Mind</p>
 
+  <ul class="work-list">
   {% for item in site.data.work %}
-  <div class="work-entry">
-    {% if item.url %}<a href="{{ item.url }}" class="work-name" target="_blank" rel="noopener noreferrer">{{ item.name
-      }}</a>{% else %}<span class="work-name">{{ item.name }}</span>{% endif %} — <span class="work-desc">{{
-      item.description }}</span>
+  <li class="work-entry">
+    {% if item.url %}<a href="{{ item.url }}" class="work-name" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>{% else %}<span class="work-name">{{ item.name }}</span>{% endif %} — <span class="work-desc">{{ item.description }}</span>
     {% if item.links %}
     <ul class="work-sublinks">
-      {% for link in item.links %}<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label
-          }}</a></li>{% endfor %}
+      {% for link in item.links %}<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>{% endfor %}
     </ul>
     {% endif %}
-  </div>
+  </li>
   {% endfor %}
+  </ul>
 
 </section>
 

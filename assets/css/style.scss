@@ -85,12 +85,17 @@ main {
 .section-label {
   font-family: var(--sans);
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--prussian);
   margin-bottom: 1.25rem;
 }
 
 /* === Work === */
+.work-list {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
 .work-entry {
   margin-bottom: 0.6rem;
   font-size: 0.95rem;
@@ -111,7 +116,7 @@ a.work-name:hover { color: var(--prussian); }
 }
 
 .work-sublinks {
-  list-style: disc;
+  list-style: "— ";
   margin: 0.3rem 0 0 1.25rem;
   font-size: 0.875rem;
 }
@@ -122,7 +127,8 @@ a.work-name:hover { color: var(--prussian); }
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem 1.25rem;
-  margin-top: 0.75rem;
+  margin-top: 0.6rem;
+  margin-bottom: -0.5rem;
   font-size: 0.875rem;
 }
 .bio-links a { color: var(--amber); transition: color 0.15s; }
@@ -149,21 +155,9 @@ a.work-name:hover { color: var(--prussian); }
   width: 220px;
   height: 160px;
   margin: 0 0 1rem 2rem;
-  background: rgba(28, 52, 97, 0.06);
-  border: 1px dashed rgba(28, 52, 97, 0.20);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
-.about-photo-slot span {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--prussian-muted);
-  opacity: 0.5;
-}
 
 .about-photo-slot img {
   width: 100%;
