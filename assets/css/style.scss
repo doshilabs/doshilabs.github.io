@@ -1,0 +1,313 @@
+---
+---
+@charset "UTF-8";
+/* === Variables === */
+:root {
+  --parchment: #FAF8F4;
+  --prussian: #1C3461;
+  --prussian-muted: rgba(28, 52, 97, 0.82);
+  --amber: #BA7517;
+  --pale-blue: #B5C8E8;
+  --gold: #EF9F27;
+  --dark: #111820;
+
+  --sans: 'Spectral', Georgia, serif;
+  --serif: 'Spectral', Georgia, serif;
+
+  --max-w: 680px;
+  --px: clamp(1.25rem, 5vw, 2rem);
+}
+
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { display: block; }
+
+/* === Base === */
+body {
+  background: var(--parchment);
+  color: var(--prussian);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--prussian); text-decoration: none; }
+
+/* === Hero brand === */
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.hero-mark { height: 40px; width: auto; }
+
+.hero-wordmark {
+  font-family: var(--sans);
+  font-size: 1.6rem;
+  color: var(--prussian);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.hero-wordmark .doshi { font-weight: 500; margin-right: 0.15em; }
+.hero-wordmark .labs  { font-weight: 300; opacity: 0.55; letter-spacing: 0.04em; }
+
+/* === Main wrapper === */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+
+/* === Hero === */
+.hero {
+  padding: 2rem 0 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--sans);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+/* === Section scaffold === */
+.section {
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(28, 52, 97, 0.10);
+}
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--prussian);
+  margin-bottom: 1.25rem;
+}
+
+/* === Work === */
+.work-entry {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.work-name {
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--amber);
+  transition: color 0.15s;
+}
+a.work-name:hover { color: var(--prussian); }
+
+.work-desc {
+  font-family: var(--serif);
+  color: var(--prussian-muted);
+}
+
+.work-sublinks {
+  list-style: disc;
+  margin: 0.3rem 0 0 1.25rem;
+  font-size: 0.875rem;
+}
+.work-sublinks a { color: var(--amber); transition: color 0.15s; }
+.work-sublinks a:hover { color: var(--prussian); }
+
+.bio-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+.bio-links a { color: var(--amber); transition: color 0.15s; }
+.bio-links a:hover { color: var(--prussian); }
+
+/* === Hero body (bio + photo) === */
+.hero-body {
+  overflow: hidden;
+}
+
+.bio {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--prussian-muted);
+}
+.bio p { margin-bottom: 1.25rem; }
+.bio p:last-child { margin-bottom: 0; }
+.bio a { color: var(--amber); transition: color 0.15s; }
+.bio a:hover { color: var(--prussian); }
+
+.about-photo-slot {
+  float: right;
+  width: 220px;
+  height: 160px;
+  margin: 0 0 1rem 2rem;
+  background: rgba(28, 52, 97, 0.06);
+  border: 1px dashed rgba(28, 52, 97, 0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-photo-slot span {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--prussian-muted);
+  opacity: 0.5;
+}
+
+.about-photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+/* === Notes === */
+.notes-list { list-style: none; }
+
+.note-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(28, 52, 97, 0.08);
+}
+.note-entry:first-child { border-top: 1px solid rgba(28, 52, 97, 0.08); }
+
+.note-entry a {
+  font-family: var(--sans);
+  font-weight: 400;
+  color: var(--prussian);
+  transition: color 0.15s;
+}
+.note-entry a:hover { color: var(--amber); }
+
+.note-date {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--prussian-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.notes-empty {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--prussian-muted);
+  font-size: 1rem;
+}
+
+/* === Note (post) page === */
+.note {
+  padding: 4rem 0 6rem;
+}
+
+.note-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(28, 52, 97, 0.10);
+}
+
+.note-header h1 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.note-header time {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--prussian-muted);
+}
+
+.note-body {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--prussian-muted);
+}
+.note-body p  { margin-bottom: 1.4rem; }
+.note-body h2 { font-family: var(--sans); font-weight: 500; font-size: 1.2rem; margin: 2.5rem 0 0.75rem; color: var(--prussian); letter-spacing: -0.01em; }
+.note-body h3 { font-family: var(--sans); font-weight: 500; font-size: 1rem; margin: 2rem 0 0.5rem; color: var(--prussian); }
+.note-body a  { color: var(--prussian); border-bottom: 1px solid var(--amber); transition: color 0.15s; }
+.note-body a:hover { color: var(--amber); }
+.note-body ul, .note-body ol { margin: 0 0 1.4rem 1.5rem; }
+.note-body li { margin-bottom: 0.4rem; }
+.note-body blockquote { border-left: 2px solid var(--amber); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--prussian-muted); font-style: italic; }
+.note-body code { font-size: 0.88em; background: rgba(28, 52, 97, 0.06); padding: 0.1em 0.35em; border-radius: 3px; font-family: 'SF Mono', 'Fira Code', monospace; }
+.note-body pre { background: rgba(28, 52, 97, 0.06); padding: 1.25rem; border-radius: 4px; overflow-x: auto; margin-bottom: 1.4rem; }
+.note-body pre code { background: none; padding: 0; }
+
+.note-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(28, 52, 97, 0.10);
+}
+.note-footer a {
+  font-size: 0.875rem;
+  color: var(--prussian-muted);
+  transition: color 0.15s;
+}
+.note-footer a:hover { color: var(--amber); }
+
+
+/* === Footer === */
+.site-footer {
+  background: var(--dark);
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1.5rem var(--px);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-mark {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
+.footer-copy {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(181, 200, 232, 0.35);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .hero { padding: 1.5rem 0 1rem; }
+  .section { padding: 1.5rem 0; }
+
+  .about-photo-slot {
+    float: none;
+    width: 100%;
+    height: 200px;
+    margin: 0 0 1.25rem 0;
+  }
+
+  .note-entry { flex-direction: column; gap: 0.2rem; }
+}

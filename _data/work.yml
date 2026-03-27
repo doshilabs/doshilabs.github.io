@@ -1,0 +1,28 @@
+- name: MLCommons
+  description: Better AI for everyone.
+  url: https://mlcommons.org
+  links:
+    - label: AILuminate
+      url: https://mlcommons.org/ailuminate/
+
+- name: GridZero.ai
+  description: Foundation models for the grid.
+  url: https://gridzero.ai
+
+- name: Gigasheet
+  description: Analytics and AI for no-code big data.
+  url: https://gigasheet.com
+  links:
+    - label: AI for Data Analysis
+      url: https://www.gigasheet.com/popular-tools/ai-spreadsheet
+
+- name: National Autism Safety Council
+  description: Tech for autism safety.
+  url: https://www.autismsafetycouncil.org/
+  links:
+    - label: Wireless Emergency Alert Generator
+      url: https://autismsafetycouncil.github.io/alert-generator/
+
+- name: LivingCanon
+  description: Catalog of award-winning books.
+  url: https://livingcanon.com

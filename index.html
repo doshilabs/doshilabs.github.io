@@ -1,0 +1,64 @@
+---
+layout: default
+title: Doshi Labs
+---
+
+<section class="hero">
+  <div class="hero-brand">
+    <img src="{{ '/assets/svg/doshi-labs-mark.svg' | relative_url }}" alt="Doshi Labs mark" class="hero-mark">
+    <span class="hero-wordmark"><span class="doshi">doshi</span><span class="labs">labs</span></span>
+  </div>
+  <div class="hero-body">
+    <div class="about-photo-slot">
+      <img src="{{ '/assets/headshots/PXL_20250424_172106566.jpg' | relative_url }}" alt="Vishal Doshi">
+    </div>
+    <div class="bio">
+      {% for paragraph in site.data.about.bio %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="bio-links">
+    <a href="{{ site.data.about.contact.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="{{ site.data.about.contact.scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a href="{{ site.data.about.contact.goodreads }}" target="_blank" rel="noopener noreferrer">Goodreads</a>
+    <a href="{{ site.data.about.contact.letterboxd }}" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+    <a href="{{ site.data.about.contact.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <p class="section-label">Things On My Mind</p>
+
+  {% for item in site.data.work %}
+  <div class="work-entry">
+    {% if item.url %}<a href="{{ item.url }}" class="work-name" target="_blank" rel="noopener noreferrer">{{ item.name
+      }}</a>{% else %}<span class="work-name">{{ item.name }}</span>{% endif %} — <span class="work-desc">{{
+      item.description }}</span>
+    {% if item.links %}
+    <ul class="work-sublinks">
+      {% for link in item.links %}<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label
+          }}</a></li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</section>
+
+<section id="notes" class="section">
+  <p class="section-label">Notes</p>
+
+  {% if site.posts.size > 0 %}
+  <ul class="notes-list">
+    {% for post in site.posts %}
+    <li class="note-entry">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="note-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="notes-empty">Writing occasionally. More soon.</p>
+  {% endif %}
+</section>

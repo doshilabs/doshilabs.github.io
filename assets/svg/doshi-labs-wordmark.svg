@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="640" height="176">
+  <!-- Doshi Labs — mark + wordmark, parchment background -->
+  <!-- Background -->
+  <rect width="320" height="88" fill="#F5F2EB"/>
+
+  <!-- Mark, centered vertically, left-anchored at x=20 -->
+  <g transform="translate(20, 8)">
+    <!-- outer N-K arc → amber -->
+    <path d="M16,6 C4,12 4,26 16,36" fill="none" stroke="#BA7517" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- inner N-K arc → prussian -->
+    <path d="M16,6 C26,12 26,26 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- K-E crossbar → amber -->
+    <line x1="16" y1="36" x2="56" y2="36" stroke="#BA7517" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- outer S-K → prussian -->
+    <path d="M16,66 C4,60 4,46 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- inner S-K → prussian -->
+    <path d="M16,66 C26,60 26,46 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- N-E top arc → prussian -->
+    <path d="M16,6 C42,1 58,18 56,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- S-E bottom arc → prussian -->
+    <path d="M16,66 C42,71 58,54 56,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- Nodes -->
+    <circle cx="16" cy="6"  r="4" fill="#BA7517"/>
+    <circle cx="16" cy="66" r="4" fill="#1C3461"/>
+    <circle cx="16" cy="36" r="4" fill="#1C3461"/>
+    <circle cx="56" cy="36" r="4" fill="#1C3461"/>
+  </g>
+
+  <!-- Wordmark, vertically centered at y=44 -->
+  <!-- "doshi" weight 500, "labs" weight 300 at 45% opacity -->
+  <text
+    x="98" y="52"
+    font-family="'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="32"
+    font-weight="500"
+    letter-spacing="-0.02em"
+    fill="#1C3461">doshi</text>
+  <text
+    x="196" y="52"
+    font-family="'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="32"
+    font-weight="300"
+    letter-spacing="0.06em"
+    fill="#1C3461"
+    opacity="0.45">labs</text>
+</svg>

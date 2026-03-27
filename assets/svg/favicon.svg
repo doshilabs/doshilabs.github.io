@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 1 56 70">
+  <!-- Doshi Labs — favicon (mark only, tight crop) -->
+  <path d="M16,6 C4,12 4,26 16,36" fill="none" stroke="#BA7517" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16,6 C26,12 26,26 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+  <line x1="16" y1="36" x2="56" y2="36" stroke="#BA7517" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16,66 C4,60 4,46 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16,66 C26,60 26,46 16,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16,6 C42,1 58,18 56,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16,66 C42,71 58,54 56,36" fill="none" stroke="#1C3461" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="16" cy="6"  r="4" fill="#BA7517"/>
+  <circle cx="16" cy="66" r="4" fill="#1C3461"/>
+  <circle cx="16" cy="36" r="4" fill="#1C3461"/>
+  <circle cx="56" cy="36" r="4" fill="#1C3461"/>
+</svg>

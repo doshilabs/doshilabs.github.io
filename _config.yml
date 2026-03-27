@@ -1,0 +1,28 @@
+title: Doshi Labs
+description: "Vishal Doshi — Doshi Labs"
+url: "https://doshilabs.com"
+baseurl: ""
+
+author:
+  name: Vishal Doshi
+  email: vishal@doshilabs.com
+
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: note
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
